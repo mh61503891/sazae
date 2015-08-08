@@ -62,6 +62,14 @@ body.houses {
     #vr {
       width: 80%;
     }
+
+    button.like {
+      .count {
+        padding: 1px 5px;
+        background: #eee;
+        border: 1px solid #ccc;
+      }
+    }
   }
 }
 
