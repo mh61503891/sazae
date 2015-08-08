@@ -30,7 +30,7 @@ class House < ActiveRecord::Base
     length: { maximum: 128 }
 
   validates :first_vacant_year,
-    numericality: { only_integer: true, greater_than: 2015 }
+    numericality: { only_integer: true, greater_than: 1950 }
 
   validates :latitude,
     numericality: { greater_than_or_equal_to: -90, less_than_or_equal_to: 90 }

@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+House.create!([
+  {
+    title: 'しかの心',
+    owner_type: 'individual',
+    owner: 'ほげ',
+    address: '鳥取県鳥取市鹿野町鹿野１８０９−１',
+    first_vacant_year: 2015,
+    latitude: 35.4605753,
+    longitude: 134.0638556,
+  }
+])
+
