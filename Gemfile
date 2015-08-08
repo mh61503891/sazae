@@ -22,9 +22,6 @@ gem 'font-awesome-rails'
 
 gem 'jbuilder', '~> 2.0'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
@@ -44,5 +41,14 @@ group :development do
   gem 'binding_of_caller'
   gem 'rack-mini-profiler'
   gem 'annotate'
+end
+
+# for deploy
+group :development do
+  gem 'capistrano', '~> 3.1', require: false
+  gem 'capistrano-bundler', '~> 1.1.2', require: false
+  gem 'capistrano-rails', '~> 1.1', require: false
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails-console'
 end
 
