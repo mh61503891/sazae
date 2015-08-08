@@ -1,0 +1,11 @@
+ja:
+  helpers:
+    label:
+
+    select:
+      prompt: "選択してください"
+
+    submit:
+      create: "%{model}を登録する"
+      update: "%{model}を更新する"
+
