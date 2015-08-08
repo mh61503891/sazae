@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'sazae'
-set :repo_url, 'git@github.com:hamajyotan/sazae.git'
+set :repo_url, 'https://github.com/hamajyotan/sazae.git'
 set :deploy_to, '/var/www/sazae'
 
 # Default branch is :master
