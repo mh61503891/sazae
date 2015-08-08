@@ -1,0 +1,63 @@
+
+body.houses {
+  &.index {
+
+  }
+
+  &.show {
+    div.balloon-wrapper {
+      width: 500px;
+      margin: 15px auto;
+    }
+    div.balloon-wrapper::after {
+      clear: both;
+      content: "";
+      display: block;
+      line-height: 0;
+    }
+    p.balloon-right {
+      position: relative;
+      z-index: 1;
+      max-width: 80%;
+      min-width: 10%;
+      margin: 15px auto;
+      padding: 13px;
+      background-color: #fff;
+      border-width: 3px;
+      border-style: solid;
+      border-radius: 10px;
+    }
+    p.balloon-right::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 10px;
+      width:  0;
+      height: 0;
+      border: 15px solid transparent;
+    }
+    p.balloon-right::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 100;
+      top: 10px;
+      width:  0;
+      height: 0;
+      border: 15px solid transparent;
+    }
+    p.balloon-right {
+      border-color: #aad;
+    }
+    p.balloon-right::before {
+      right: -31px;
+      border-left: 15px solid #aad;
+    }
+    p.balloon-right::after {
+      right: -28px;
+      border-left: 15px solid #fff;
+    }
+  }
+}
+
