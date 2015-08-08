@@ -34,7 +34,7 @@
       <p class="balloon-right">
         <%= comment.body %>
       </p>
-      <button type="button" class="pull-right like" data-url="<%= like_house_comment_path(house_id: comment.house.id, id: comment.id, format: :json) %>">
+      <button type="button" class="pull-right like btn btn-xs btn-info" data-url="<%= like_house_comment_path(house_id: comment.house.id, id: comment.id, format: :json) %>">
         <span>せやな!</span>
         <span class="count"><%= comment.like_count %></span>
       </button>

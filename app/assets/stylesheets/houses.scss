@@ -66,8 +66,8 @@ body.houses {
     button.like {
       .count {
         padding: 1px 5px;
-        background: #eee;
-        border: 1px solid #ccc;
+        font-weight: bold;
+        text-decoration: underline;
       }
     }
   }
