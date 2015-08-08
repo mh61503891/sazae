@@ -18,16 +18,22 @@
   </div>
 </nav>
 
-<image src="front.jpg" class="img-responsive" alt="front image."/>
+<%= image_tag 'shikanogokoro.jpg', class: 'front', alt: "front image." %>
 <div id="front-image-message" align="center">front image</div>
 
-<form class="form-horizontal" role="form">
-  <textarea class="form-control" rows="2" placeholder="どうしたい？"></textarea>
+<form role="form">
+  <div class="form-group">
+    <textarea class="form-control" rows="2" placeholder="どうしたい？"></textarea>
+  </div>
   <div align="right">
-    <button type="button" class="btn-primary">したらええがなー</button>
+    <button type="button" class="btn btn-primary">
+      <i class="fa fa-pencil"></i>
+      <span>したらええがなー</span>
+    </button>
   </div>
 </form>
 
+<div class="row">
 <% @house.comments.each do |comment| %>
   <div class="balloon-wrapper">
     <div id='<%= comment.id %>'>
@@ -35,12 +41,14 @@
         <%= comment.body %>
       </p>
       <button type="button" class="pull-right like btn btn-xs btn-info" data-url="<%= like_house_comment_path(house_id: comment.house.id, id: comment.id, format: :json) %>">
+        <i class="fa fa-star"></i>
         <span>せやな!</span>
         <span class="count"><%= comment.like_count %></span>
       </button>
       <br>
     </div>
-<% end %>
+  <% end %>
+</div>
 
 <div class="vr">
   <iframe id="vr" src='/contents/<%= @house.id %>/vr/' name="vr">iframe</iframe>
