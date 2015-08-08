@@ -20,7 +20,7 @@ House.create!([
 
 Comment.create!([
   {
-    body: '駐車場にしてみたらどうだろう？\nだめ？',
+    body: "駐車場にしてみたらどうだろう？だめ？",
     house_id: 1
   },
   {
