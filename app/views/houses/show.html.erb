@@ -19,19 +19,20 @@
 </nav>
 
 <%= image_tag 'shikanogokoro.jpg', class: 'front', alt: "front image." %>
-<div id="front-image-message" align="center">front image</div>
 
+<div class="row">
 <form role="form">
   <div class="form-group">
     <textarea class="form-control" rows="2" placeholder="どうしたい？"></textarea>
   </div>
   <div align="right">
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="vote btn btn-primary">
       <i class="fa fa-pencil"></i>
       <span>したらええがなー</span>
     </button>
   </div>
 </form>
+</div>
 
 <div class="row">
 <% @house.comments.each do |comment| %>

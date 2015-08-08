@@ -62,10 +62,15 @@ body.houses {
     }
 
     #vr {
-      width: 80%;
+      width: 100%;
+    }
+
+    button.vote {
+      margin-right: 25px;
     }
 
     button.like {
+      margin-right: 30px;
       .count {
         padding: 1px 5px;
         font-weight: bold;
