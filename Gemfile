@@ -7,14 +7,14 @@ gem 'rails', '4.2.3'
 group :development, :test do
   gem 'sqlite3'
 end
-group :staging, :production do
-  gem 'mysql2'
-end
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'therubyracer', platforms: :ruby
+
+group :staging, :production do
+  gem 'therubyracer', platforms: :ruby
+end
 
 gem 'jquery-rails'
 gem 'turbolinks'
