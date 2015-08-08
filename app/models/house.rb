@@ -41,6 +41,8 @@ class House < ActiveRecord::Base
   after_initialize :set_defaults
   before_validation :normalize
 
+  has_many :comments, dependent: :destroy
+
   def location
     Location.new(latitude, longitude) if latitude? && longitude?
   end

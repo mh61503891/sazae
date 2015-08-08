@@ -18,3 +18,13 @@ House.create!([
   }
 ])
 
+Comment.create!([
+  {
+    body: '駐車場にしてみたらどうだろう？\nだめ？',
+    house_id: 1
+  },
+  {
+    body: '更地でOK',
+    house_id: 1
+  }
+])

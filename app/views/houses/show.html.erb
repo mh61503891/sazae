@@ -28,22 +28,15 @@
   </div>
 </form>
 
-<div class="balloon-wrapper">
-  <div id="1">
-    <p class="balloon-right">
-駐車場にしてみたらどうだろう？
-だめ？
-    </p>
-    <button type="button" class="pull-right">せやな! +1</button><br>
-  </div>
-  <div id="2">
-    <p class="balloon-right">
-駐車場にしてみたらどうだろう？
-だめ？
-    </p>
-    <button type="button" class="pull-right">せやな! +1</button><br>
-  </div>
-</div>
+<% @house.comments.each do |comment| %>
+  <div class="balloon-wrapper">
+    <div id='<%= comment.id %>'>
+      <p class="balloon-right">
+        <%= comment.body %>
+      </p>
+      <button type="button" class="pull-right">せやな! +1</button><br>
+    </div>
+<% end %>
 
 <div class="vr">
   <iframe src='/contents/<%= @house.id %>/vr/' name="vr">iframe</iframe>
