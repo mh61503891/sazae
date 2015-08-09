@@ -21,32 +21,35 @@
 <%= image_tag 'shikanogokoro.jpg', class: 'front', alt: "front image." %>
 
 <div class="row">
-  <form role="form">
-    <div class="form-group">
-      <textarea class="form-control" rows="2" placeholder="どうしたい？"></textarea>
-    </div>
-    <div align="right">
-      <button type="button" class="vote btn btn-primary">
-        <i class="fa fa-pencil"></i>
-        <span>したらええがなー</span>
-      </button>
-    </div>
-  </form>
+  <div class="col-sm-12">
+    <form role="form">
+      <div class="form-group">
+        <textarea class="form-control" rows="2" placeholder="どうしたい？"></textarea>
+      </div>
+      <div align="right">
+        <button type="button" class="vote btn btn-primary">
+          <i class="fa fa-pencil"></i>
+          <span>したらええがなー</span>
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <div class="row">
-<% @house.comments.each do |comment| %>
-  <div class="balloon-wrapper">
-    <div id='<%= comment.id %>'>
-      <p class="balloon-right">
-        <%= comment.body %>
-      </p>
-      <button type="button" class="pull-right like btn btn-xs btn-info" data-url="<%= like_house_comment_path(house_id: comment.house.id, id: comment.id, format: :json) %>">
-        <i class="fa fa-star"></i>
-        <span>せやな!</span>
-        <span class="count"><%= comment.like_count %></span>
-      </button>
-      <br>
+  <% @house.comments.reverse_order.each do |comment| %>
+    <div class="balloon-wrapper">
+      <div id='<%= comment.id %>'>
+        <p class="balloon-right">
+          <%= comment.body %>
+        </p>
+        <button type="button" class="pull-right like btn btn-xs btn-info" data-url="<%= like_house_comment_path(house_id: comment.house.id, id: comment.id, format: :json) %>">
+          <i class="fa fa-star"></i>
+          <span>せやな!</span>
+          <span class="count"><%= comment.like_count %></span>
+        </button>
+        <br>
+      </div>
     </div>
   <% end %>
 </div>
