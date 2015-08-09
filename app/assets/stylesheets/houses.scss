@@ -79,6 +79,7 @@ body.houses {
 
     button.vote {
       margin-right: 10px;
+      outline-color: #f25381;
     }
 
     button.like {
@@ -88,6 +89,7 @@ body.houses {
         font-weight: bold;
         text-decoration: underline;
       }
+      outline-color: #f25381;
     }
   }
 }
