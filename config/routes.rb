@@ -4,6 +4,9 @@ Rails.application.routes.draw do
       member do
         post :like, format: :json
       end
+      collection do
+        post :create, format: :js
+      end
     end
   end
 
