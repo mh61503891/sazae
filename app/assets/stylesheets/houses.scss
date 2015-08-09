@@ -28,6 +28,11 @@ body.houses {
     div.balloon-wrapper {
       margin: 15px auto;
     }
+    div.balloon-wrapper.inserted {
+      p {
+        background-color: lightyellow;
+      }
+    }
     div.balloon-wrapper::after {
       clear: both;
       content: "";

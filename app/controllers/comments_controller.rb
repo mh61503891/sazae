@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @house.comments.create(comment_params)
-    render json: { comment: @comment }
+    render json: { comment: @comment, html: render_to_string(partial: 'houses/comment', object: @comment) }
   end
 
   def like

@@ -14,6 +14,11 @@ $ ->
       $('textarea.vote').autosize()
 
       $(document).on 'ajax:success', '#new_comment', (event, data, status) ->
-        alert event
-        alert data
-        alert status
+        $("#comment_body").val("").focus()
+        comment = $(data.html)
+        comment.addClass("inserted")
+        $("#comment-list").prepend comment
+        setTimeout(->
+          comment.removeClass("inserted")
+        , 1000)
+
