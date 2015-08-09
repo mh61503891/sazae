@@ -9,12 +9,14 @@ body.houses {
     img.front {
       width: 100%;
       margin-bottom: 8px;
+      border-radius: 10px;
     }
 
     .vote.form-group {
       margin-bottom: 10px;
       textarea {
-
+        border-radius: 10px;
+        border-width: 3px;
       }
     }
 
