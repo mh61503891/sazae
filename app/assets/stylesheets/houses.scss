@@ -5,8 +5,10 @@ body.houses {
   }
 
   &.show {
+    img.front {
+      width: 100%;
+    }
     div.balloon-wrapper {
-      width: 500px;
       margin: 15px auto;
     }
     div.balloon-wrapper::after {
@@ -20,7 +22,7 @@ body.houses {
       z-index: 1;
       max-width: 80%;
       min-width: 10%;
-      margin: 15px auto;
+      margin: 15px auto 5px;
       padding: 13px;
       background-color: #fff;
       border-width: 3px;
@@ -60,7 +62,20 @@ body.houses {
     }
 
     #vr {
-      width: 80%;
+      width: 100%;
+    }
+
+    button.vote {
+      margin-right: 25px;
+    }
+
+    button.like {
+      margin-right: 30px;
+      .count {
+        padding: 1px 5px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
     }
   }
 }

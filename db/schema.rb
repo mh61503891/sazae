@@ -11,25 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150808192720) do
+ActiveRecord::Schema.define(version: 20150808204858) do
 
   create_table "comments", force: :cascade do |t|
-    t.string   "body",       null: false
-    t.integer  "house_id",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "body",                   null: false
+    t.integer  "house_id",               null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "like_count", default: 0, null: false
   end
 
   create_table "houses", force: :cascade do |t|
-    t.string   "title",             null: false
-    t.string   "owner_type",        null: false
+    t.string   "title",                         null: false
+    t.string   "owner_type",                    null: false
     t.string   "owner"
     t.string   "address"
     t.integer  "first_vacant_year"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "like_count",        default: 0, null: false
   end
 
 end
