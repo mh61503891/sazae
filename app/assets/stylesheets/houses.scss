@@ -5,9 +5,19 @@ body.houses {
   }
 
   &.show {
+
     img.front {
       width: 100%;
+      margin-bottom: 8px;
     }
+
+    .vote.form-group {
+      margin-bottom: 10px;
+      textarea {
+
+      }
+    }
+
     div.balloon-wrapper {
       margin: 15px auto;
     }
@@ -66,7 +76,7 @@ body.houses {
     }
 
     button.vote {
-      margin-right: 25px;
+      margin-right: 10px;
     }
 
     button.like {

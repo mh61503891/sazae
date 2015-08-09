@@ -23,6 +23,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
+gem 'autosize-rails'
 
 gem 'jbuilder', '~> 2.0'
 

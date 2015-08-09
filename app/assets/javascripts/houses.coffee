@@ -11,3 +11,5 @@ $ ->
       # とりま、 3:2 のアスペ比 でグリグリの高さを調整します
       $("iframe#vr").height($("iframe#vr").width() * 2 / 3)
 
+      $('textarea.vote').autosize()
+
