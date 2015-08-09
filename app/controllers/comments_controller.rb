@@ -2,6 +2,11 @@ class CommentsController < ApplicationController
   before_action :set_house
   before_action :set_comment, only: [:like]
 
+  def create
+    @comment = @house.comments.create(comment_params)
+    render json: { comment: @comment }
+  end
+
   def like
     @comment.like!
     render json: { comment: @comment }
@@ -15,5 +20,9 @@ class CommentsController < ApplicationController
 
   def set_comment
     @comment = @house.comments.find(params[:id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:body)
   end
 end

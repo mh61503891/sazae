@@ -13,3 +13,7 @@ $ ->
 
       $('textarea.vote').autosize()
 
+      $(document).on 'ajax:success', '#new_comment', (event, data, status) ->
+        alert event
+        alert data
+        alert status

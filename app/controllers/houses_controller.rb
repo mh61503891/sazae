@@ -6,6 +6,7 @@ class HousesController < ApplicationController
   end
 
   def show
+    @new_comment = @house.comments.new
   end
 
   private
