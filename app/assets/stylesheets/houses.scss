@@ -6,7 +6,7 @@ body.houses {
 
   &.show {
     .navbar-brand {
-      background: url(brand_icon.jpg) no-repeat left center;
+      background: image-url("brand_icon.jpg") no-repeat left center;
       background-size: contain;
       width: 50%
     }
