@@ -37,5 +37,11 @@ module Sazae
     config.active_record.raise_in_transactional_callbacks = true
 
     config.autoload_paths += %W(#{config.root}/app/values)
+
+    if ENV['BASIC_AUTH_USERNAME'] && ENV['BASIC_AUTH_PASSWORD']
+      config.middleware.insert_before 0, Rack::Auth::Basic do |username, password|
+        username == ENV['BASIC_AUTH_USERNAME'] && password == ENV['BASIC_AUTH_PASSWORD']
+      end
+    end
   end
 end
