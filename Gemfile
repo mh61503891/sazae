@@ -27,6 +27,12 @@ gem 'autosize-rails'
 
 gem 'jbuilder', '~> 2.0'
 
+# for EMA
+gem 'prawn'
+gem 'rqrcode'
+gem 'rqrcode_png'
+gem 'chunky_png'
+
 group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'

@@ -3,6 +3,11 @@
     <p class="balloon-right">
       <%= br comment.body %>
     </p>
+
+
+    <%= link_to '絵馬', house_comment_path(house_id: comment.house.id, id: comment.id, format: :pdf), class:"btn btn-info pull-right" %>
+
+
     <button type="button" class="pull-right like btn btn-xs btn-info" data-url="<%= like_house_comment_path(house_id: comment.house.id, id: comment.id, format: :json) %>">
       <i class="fa fa-star"></i>
       <span>せやな!</span>

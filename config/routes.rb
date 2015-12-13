@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :houses, only: [:index, :show] do
-    resources :comments, only: [] do
+    resources :comments, only: [:show] do
       member do
         post :like, format: :json
       end
