@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
           right_margin: 0
         }
         message = @comment.body
-        url = url_for(only_path: false, format:'pdf')
+        url = url_for(@house)
         pdf = Prawn::Document.new(params)
         pdf.image 'vendor/assets/images/background.png', at: [0, 235], width: 396
         if message
