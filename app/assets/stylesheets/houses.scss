@@ -45,6 +45,8 @@ body.houses {
       max-width: 80%;
       min-width: 10%;
       margin: 15px auto 5px;
+      margin-right: 100px;
+      left: 3%;
       padding: 13px;
       background-color: #fff;
       border-width: 3px;
@@ -100,6 +102,10 @@ body.houses {
         text-decoration: underline;
       }
       outline-color: #f25381;
+    }
+
+    a.ema {
+      margin-top: 10px;
     }
   }
 }

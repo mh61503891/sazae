@@ -3,8 +3,12 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:like, :show]
 
   def create
-    @comment = @house.comments.create(comment_params)
-    render json: { comment: @comment, html: render_to_string(partial: 'houses/comment', object: @comment) }
+    unless comment_params[:body].blank?
+      @comment = @house.comments.create(comment_params)
+      render json: { comment: @comment, html: render_to_string(partial: 'houses/comment', object: @comment) }
+    else
+      render json: { comment: @comment }
+    end
   end
 
   def like
